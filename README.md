@@ -14,12 +14,17 @@
 
 Our Data consists of 2 sources over 5 files:
 1. Book recommendation dataset
+
   a. Books.csv: This is the main file, which contains Book ISBN, Title, Author, Publishers etc.
+  
   b. Ratings.csv: This is the ratings data of each user
+  
   c. Users.csv: This contains demographic information of each user
   
 2. Amazon Book reviews dataset
+
   a. Books_rating.csv: This file has information about book reviews for unique book and users who gives these reviews for each book.
+  
   b. books_data.csv: This file contains the details of books such as genres, authors, cover, description and etc.
 
 ### <u> Data Cleaning and Initial Processing: </u>
