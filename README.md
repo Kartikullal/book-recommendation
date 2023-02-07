@@ -12,13 +12,15 @@
 
 ### <u> Data Sources: </u>
 
-Our Data consists of 3 files:
-
-1. Books.csv: This is the main file, which contains Book ISBN, Title, Author, Publishers etc. 
-
-2. Ratings.csv: This is the ratings data of each user
-
-3. Users.csv: This contains demographic information of each user
+Our Data consists of 2 sources over 5 files:
+1. Book recommendation dataset
+  a. Books.csv: This is the main file, which contains Book ISBN, Title, Author, Publishers etc.
+  b. Ratings.csv: This is the ratings data of each user
+  c. Users.csv: This contains demographic information of each user
+  
+2. Amazon Book reviews dataset
+  a. Books_rating.csv: This file has information about book reviews for unique book and users who gives these reviews for each book.
+  b. books_data.csv: This file contains the details of books such as genres, authors, cover, description and etc.
 
 ### <u> Data Cleaning and Initial Processing: </u>
 
@@ -40,16 +42,16 @@ We have implemented 4 algorithms for this recommendation system:
 
 #### <u> Popularity based filtering: </u>
 
-This system recommends books based on the which books are in trend. For each book, the number of ratings received and their median value is calculated. Using these two numbers, a popularity score is calculated using Bayesian average.
+Based on which books are popular, this system suggests novels for you to read. The number of ratings and their median score are computed for each book. The Bayesian average is used to determine a popularity score using these two numbers.
 
 #### <u> Item based filtering: </u>
 
-Item based collaborative filtering involves analyzing past behavior of a user towards items that they have already rated and then recommending items that are similar to the used items. The first step involves creating a Item-Item similarity matrix. From this matrix, we can see which items are most similar to which other items. Now based on items already rated by the user, we recommend the most similar items.
+Item based collaborative filtering involves analyzing past behavior of a user towards items that they have already rated and then recommending items that are similar to the used items. The first step involves creating a User-Item similarity matrix. From this matrix, we can see which items are most similar to which other items. Now based on items already rated by the user, we recommend the most similar items.
 
 #### <u> User based filtering: </u>
 
-A drawback of item based collaborative filtering is that a users keeps on getting recommendations of a same type, and as the user uses these recommendations, they again get recommendation of the same type. This drawback can be overcome by using User based collaborative filtering. The first step involves creating a User-User similarity matrix. From this matrix, we can see which users are most similar to which other users. Now based on items already rated by a user, we recommend the items which are also rated higher by other most similar users.
+User-based collaborative filtering involves analyzing the past behaviour of various users towards items that they have already rated and then recommending items that are similar to the other users' items. The first step involves creating a User-Item similarity matrix. From this matrix, we can see which users are most similar to which other users. Now based on items already rated by a user, we recommend the items which are also rated higher by other similar users.
 
 #### <u> Content based Recommendation System: </u>
 
-This technique is similar to Item based filtering, in that it involves analyzing history of a single user. The key difference however is that it uses individual item features, instead of creating a item-item matrix. By analyzing how a user rated different items and their feature values, a rating score is calculated for other items. Recommendations are then created based on these individual item scores.
+Collaborative filtering has the disadvantage that users repeatedly receive recommendations of the same type, and as they act on these recommendations, they repeatedly receive recommendations of the same type. The main distinction in content-based filtering is that we don't employ a User-Item matrix. Instead, we create a feature vector based on different features for each item and use similarity metrics to compare it to other titles to generate recommendations.
