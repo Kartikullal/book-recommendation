@@ -50,6 +50,6 @@ Item based collaborative filtering involves analyzing past behavior of a user to
 
 A drawback of item based collaborative filtering is that a users keeps on getting recommendations of a same type, and as the user uses these recommendations, they again get recommendation of the same type. This drawback can be overcome by using User based collaborative filtering. The first step involves creating a User-User similarity matrix. From this matrix, we can see which users are most similar to which other users. Now based on items already rated by a user, we recommend the items which are also rated higher by other most similar users.
 
-#### <u> User based Content filtering: </u>
+#### <u> Content based Recommendation System: </u>
 
 This technique is similar to Item based filtering, in that it involves analyzing history of a single user. The key difference however is that it uses individual item features, instead of creating a item-item matrix. By analyzing how a user rated different items and their feature values, a rating score is calculated for other items. Recommendations are then created based on these individual item scores.
