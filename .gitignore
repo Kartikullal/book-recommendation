@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0e7e074803595d406aa83618fcbfcd231129adf8b892b3f3a2f6f155bcea0a29
-size 81
+/.venv/
+__pycache__/
+.DS_Store
+Data/Amazon_Data/Books_rating.csv
